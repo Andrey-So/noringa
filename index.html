@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+
+    <!-- <link rel="stylesheet" href="css/bootstrap.min.css"> -->
+    <link href="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.3.3/dist/css/suggestions.min.css" type="text/css" rel="stylesheet" />
+
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <title></title>
+  </head>
+  <body>
+  <main>
+    <form onsubmit="return false">
+      <p></p>
+      <div class="row">
+          <div class="col s12">
+            <label>
+              <input type="checkbox" id="Organization" class="filled-in" />
+              <span>Заказ на организацию?</span>
+            </label>
+          </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">textsms</i>
+          <input type="text" id="inputName" required oninvalid="this.setCustomValidity('Пожалуйста, заполните это поле')" oninput="setCustomValidity('')">
+          <label for="inputName" id="labelAutocomplete">Имя, фамилия, может быть отчество</label>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">contact_phone</i>
+          <input type="tel" id="inputPhone" minlength="18" required oninvalid="this.setCustomValidity('Пожалуйста, введите номер полностью, например: +7 (913) 913-13-13')" oninput="setCustomValidity('')">
+          <label for="inputPhone">Номер телефона</label>
+          <span class="helper-text" data-error="Пожалуйста, введите правильный номер телефона"></span>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">email</i>
+          <input type="email" id="inputEmail" class="validate" required>
+          <label for="inputEmail">Адрес электронной почты</label>
+          <span class="helper-text" data-error="Пожалуйста, введите правильный адрес электронной почты" ></span>
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">date_range</i>
+          <input type="text" id="inputDate" class="datepicker">
+        </div>
+        <div class="input-field col s12">
+          <i class="material-icons prefix">home</i>
+          <label for="inputAddress">Адрес доставки</label>
+          <input type="text" id="inputAddress" required>
+        </div>
+        <div class="buttons-wrapper">
+          <input class="btn" type="submit" id="buttonSubmit" value="Отправить">
+          <input class="btn" type="button" id="buttonClear" value="Очистить">
+        </div>
+      </div>
+    </form>
+    <p class="result">
+    </p>
+  </main>
+  <footer></footer>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+ 
+  <!--[if lt IE 10]>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ajaxtransport-xdomainrequest/1.0.1/jquery.xdomainrequest.min.js"></script>
+  <![endif]-->
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/suggestions-jquery@18.3.3/dist/js/jquery.suggestions.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script>
+  <script src="js/backend.js"></script>
+</body>
+</html>
